@@ -13,6 +13,17 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css:[
+      {
+          src:'@/assets/css/base.less',
+            lang:'less'
+      },
+      {
+          src:'@/assets/css/common.less',
+            lang:'less'
+      },
+      '@/assets/css/normalize.css',
+    ],
   /*
   ** Customize the progress bar color
   */
@@ -34,6 +45,14 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  modules: [
+    '@nuxtjs/style-resources' // 添加对应的模块
+  ],
+  styleResources: {
+    less: [
+        '@/assets/css/common.less' // 全局 scss 变量
+    ]
+  }  
 }
 
